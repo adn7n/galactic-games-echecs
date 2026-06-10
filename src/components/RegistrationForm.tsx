@@ -1,3 +1,4 @@
+import content from "../content/home.json";
 import React, { useState, useEffect } from "react";
 import { User, Mail, Phone, BarChart2, CheckCircle2, Ticket, ArrowLeft, Loader2, Receipt, Send, Sparkles, Copy, Check } from "lucide-react";
 import { saveRegistration, loadRegistrations, INITIAL_CAPACITY, AGE_CATEGORIES } from "../utils/registrationData";
@@ -22,13 +23,13 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleCopyIBAN = () => {
-    navigator.clipboard.writeText("CH63 0900 0000 1632 8386 5");
+    navigator.clipboard.writeText("${content.iban}");
     setCopiedIBAN(true);
     setTimeout(() => setCopiedIBAN(false), 2000);
   };
 
   const handleCopyAllPayments = (ticketNum: string, playerFirstName: string, playerLastName: string) => {
-    const text = `Bénéficiaire : CCP Cercle d’Echecs de Nyon\nAdresse : 1260 Nyon\nIBAN : CH63 0900 0000 1632 8386 5\nMotif de versement : ${playerFirstName} ${playerLastName} - Numéro de joueur: ${ticketNum}\nMontant : CHF 30.00`;
+    const text = `Bénéficiaire : CCP Cercle d’Echecs de Nyon\nAdresse : ${content.ibanAdresse}\nIBAN : ${content.iban}\nMotif de versement : ${playerFirstName} ${playerLastName} - Numéro de joueur: ${ticketNum}\nMontant : CHF 30.00`;
     navigator.clipboard.writeText(text);
     setCopiedAll(true);
     setTimeout(() => setCopiedAll(false), 2000);
@@ -126,7 +127,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
 
         {/* Subtitle */}
         <p className="text-slate-500 text-xs sm:text-sm font-sans mb-10 text-center leading-relaxed font-medium">
-          Frais d'inscription : <span className="text-slate-800 font-bold">CHF 30.-</span> &bull; Dimanche 15 novembre 2026 &bull; Nyon
+          Frais d'inscription : <span className="text-slate-800 font-bold">CHF 30.-</span> &bull; ${content.date} &bull; Nyon
         </p>
 
         {/* Capacity Indicator Banner */}
@@ -184,7 +185,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
               {/* Ticket Top Color Header banner */}
               <div className="bg-gradient-to-r from-indigo-600 to-indigo-850 py-5 px-6 relative flex justify-between items-center text-white">
                 <div>
-                  <h4 className="font-serif italic text-lg tracking-wide font-bold">Galactic Games 2026</h4>
+                  <h4 className="font-serif italic text-lg tracking-wide font-bold">Galactic Games ${content.year}</h4>
                   <p className="text-[9px] font-mono tracking-widest uppercase text-indigo-150 font-bold">Reçu & Facture d'Adhésion</p>
                 </div>
                 <Receipt className="w-7 h-7 text-white/35 shrink-0" />
@@ -217,7 +218,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
                   </div>
                   <div>
                     <span className="block text-[9px] font-sans uppercase tracking-widest text-slate-400 font-bold">Date de l'édition</span>
-                    <strong className="text-xs font-sans text-slate-700 font-bold">15 Novembre 2026</strong>
+                    <strong className="text-xs font-sans text-slate-700 font-bold">${content.dateShort}</strong>
                   </div>
                 </div>
 
@@ -248,14 +249,14 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
                   <div className="bg-indigo-50/70 border border-indigo-100 rounded-xl p-4 text-xs space-y-2.5 text-slate-700 relative overflow-hidden">
                     <div className="space-y-1">
                       <p className="font-bold text-slate-950">CCP Cercle d’Echecs de Nyon</p>
-                      <p className="text-slate-600 font-medium text-[11px]">1260 Nyon</p>
+                      <p className="text-slate-600 font-medium text-[11px]">${content.ibanAdresse}</p>
                     </div>
                     
                     <div className="pt-2 border-t border-slate-100 flex flex-col xs:flex-row xs:items-center justify-between gap-2">
                       <div className="space-y-0.5">
                         <span className="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Identifiant IBAN</span>
                         <p className="font-mono text-xs text-indigo-900 font-bold select-all tracking-wide">
-                          CH63 0900 0000 1632 8386 5
+                          ${content.iban}
                         </p>
                       </div>
                       <button

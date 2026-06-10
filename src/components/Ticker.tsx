@@ -1,3 +1,4 @@
+import content from "../content/home.json";
 import React from "react";
 
 export default function Ticker() {
@@ -8,7 +9,7 @@ export default function Ticker() {
         <div className="inline-block mb-8 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-100 bg-indigo-50/50 text-xs font-mono font-semibold text-indigo-650 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-            Organisé par le Club d'Échecs de Nyon
+            {content.club}
           </div>
         </div>
 
