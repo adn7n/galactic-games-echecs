@@ -1,4 +1,3 @@
-cat > src/components/Hero.tsx << 'EOF'
 import React, { useState, useEffect } from "react";
 import { Sparkles, Calendar, MapPin, Trophy, ChevronRight } from "lucide-react";
 import content from "../content/home.json";
@@ -156,4 +155,3 @@ export default function Hero() {
     </section>
   );
 }
-EOF
