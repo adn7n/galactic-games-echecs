@@ -1,0 +1,6 @@
+{
+  "name": "Galactic Games — Tournoi d'Échecs",
+  "description": "Plateforme d'inscription et de présentation immersive pour le tournoi d'échecs Galactic Games 2026 à Nyon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
