@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Gamepad2, Shuffle, Zap, Trophy, Award, Gift, ChevronRight, Layers } from "lucide-react";
+import rewardsData from "../content/rewards.json";
 
 interface PrizeItem {
   id: string;
@@ -11,7 +12,10 @@ interface PrizeItem {
   color: string;
 }
 
-const PRIZE_ITEMS: PrizeItem[] = [
+const iconMap: Record<string, React.ElementType> = { ps5: Gamepad2, switch2: Layers, drones: Zap, fc27: Trophy };
+const colorMap: Record<string, string> = { ps5: "from-blue-50/50 to-white", switch2: "from-rose-50/50 to-white", drones: "from-emerald-50/50 to-white", fc27: "from-amber-50/50 to-white" };
+const PRIZE_ITEMS: PrizeItem[] = rewardsData.prizes.map(p => ({ ...p, icon: iconMap[p.id], color: colorMap[p.id] }));
+const UNUSED = [
   {
     id: "ps5",
     name: "PS5 Slim",

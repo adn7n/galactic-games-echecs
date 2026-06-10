@@ -1,0 +1,53 @@
+{
+  "prizes": [
+    {
+      "id": "ps5",
+      "name": "PS5 Slim",
+      "availability": "x2 disponibles",
+      "description": "Pour les grands gagnants",
+      "specs": [
+        "Édition Standard Châssis D",
+        "1 To SSD Ultra-rapide",
+        "Vient avec 2 manettes DualSense",
+        "Inclus 3 mois de PS Plus extra"
+      ]
+    },
+    {
+      "id": "switch2",
+      "name": "Nintendo Switch 2",
+      "availability": "x2 disponibles",
+      "description": "La nouvelle console portable",
+      "specs": [
+        "Nouvel Écran OLED 8 pouces",
+        "Support natif DLSS Nvidia",
+        "Mémoire interne doublée à 128 Go",
+        "Inclus le jeu de lancement"
+      ]
+    },
+    {
+      "id": "drones",
+      "name": "Drones GPS",
+      "availability": "x10 disponibles",
+      "description": "Explorez les cieux",
+      "specs": [
+        "Caméra 4K stabilisée 3 axes",
+        "Portée de transmission de 4 km",
+        "Autonomie de vol de 31 minutes",
+        "Retour automatique intelligent au point de départ"
+      ]
+    },
+    {
+      "id": "fc27",
+      "name": "FC27",
+      "availability": "x10 disponibles",
+      "description": "Le jeu de foot incontournable",
+      "specs": [
+        "Nouveau moteur HyperMotion V",
+        "Mode carrière retravaillé",
+        "Compatible PS5 / Xbox / PC",
+        "Édition Standard Physique"
+      ]
+    }
+  ],
+  "participantPrize": "Chez Galactic Games, aucun joueur ne part les mains vides. Chaque joueur repart avec un cadeau exclusif du tournoi (incluant l'insigne d'honneur, un carnet tactique, et d'autres goodies), quels que soient ses résultats physiques dans le classement."
+}

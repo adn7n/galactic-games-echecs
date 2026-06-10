@@ -7,22 +7,33 @@ media_folder: public/images
 
 collections:
   - name: pages
-    label: Pages
+    label: Infos générales
     files:
       - name: home
-        label: Page principale
+        label: Infos du tournoi
         file: src/content/home.json
         fields:
-          - { label: Titre, name: title, widget: string }
-          - { label: Description, name: description, widget: text }
           - { label: Année, name: year, widget: string }
           - { label: Date affichée, name: date, widget: string }
-          - { label: Date courte, name: dateShort, widget: string }
-          - { label: Date compte à rebours, name: targetDate, widget: string }
           - { label: Prix inscription, name: price, widget: string }
-          - { label: Capacité max, name: capacity, widget: string }
           - { label: Ville, name: city, widget: string }
           - { label: Nom du club, name: club, widget: string }
           - { label: IBAN, name: iban, widget: string }
-          - { label: Bénéficiaire IBAN, name: ibanBeneficiaire, widget: string }
-          - { label: Adresse IBAN, name: ibanAdresse, widget: string }
+      - name: rewards
+        label: Récompenses
+        file: src/content/rewards.json
+        fields:
+          - label: Prix participants
+            name: participantPrize
+            widget: text
+          - label: Liste des prix
+            name: prizes
+            widget: list
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Disponibilité, name: availability, widget: string }
+              - { label: Description, name: description, widget: string }
+              - label: Caractéristiques
+                name: specs
+                widget: list
+                field: { label: Spec, name: spec, widget: string }
