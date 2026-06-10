@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: adn7n/galactic-games-echecs
+  branch: main
+
+media_folder: public/images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Page principale
+        file: src/content/home.json
+        fields:
+          - { label: Titre, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
