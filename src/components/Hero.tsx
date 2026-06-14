@@ -144,7 +144,7 @@ export default function Hero() {
           </div>
           <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-xs text-center transition-all duration-300 hover:border-indigo-100 flex flex-col items-center justify-center">
             <h3 className="font-serif italic text-4xl font-bold text-slate-800 mb-2 text-center w-full">
-              24+
+              {content.prizesCount}
             </h3>
             <p className="text-xs uppercase tracking-wider text-slate-400 font-bold font-mono text-center">
               Prix à gagner
