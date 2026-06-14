@@ -1,0 +1,42 @@
+{
+  "cadence": "7 rondes · 10 min + 5s",
+  "cadenceDescription": "Le tournoi respecte les directives d'arbitrage de la Fédération Suisse des Échecs. Arbitre principal présent sur place.",
+  "items": [
+    {
+      "id": "p1",
+      "time": "9h00",
+      "title": "Accueil",
+      "description": "Confirmation des présences et enregistrement des participants",
+      "details": [
+        "Émargement obligatoire des inscrits",
+        "Remise du pass d'accès galactic et du pack cadeau d'accueil",
+        "Vérification finale des niveaux et affectation des tables",
+        "Boisson chaude et viennoiseries de bienvenue offertes"
+      ]
+    },
+    {
+      "id": "p2",
+      "time": "10h00",
+      "title": "Début du tournoi",
+      "description": "Ouverture officielle et début des rondes",
+      "details": [
+        "Discours d'inauguration par le président du Club d'Échecs de Nyon",
+        "Système Suisse en 7 rondes cadencées",
+        "Contrôle du temps : 10 minutes + 5 secondes par coup",
+        "Pause déjeuner libre entre la ronde 3 et 4 (12h30 - 13h30)"
+      ]
+    },
+    {
+      "id": "p3",
+      "time": "17h00",
+      "title": "Remise des prix",
+      "description": "Cérémonie de remise des récompenses aux vainqueurs",
+      "details": [
+        "Classement officiel par points et critères de départage (Buchholz)",
+        "Attribution des grands prix galactiques (PS5, Switch 2, Drones, FC27)",
+        "Remise du lot universel pour chaque joueur restant",
+        "Apéritif de clôture et photo officielle"
+      ]
+    }
+  ]
+}

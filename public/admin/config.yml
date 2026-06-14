@@ -7,7 +7,7 @@ media_folder: public/images
 
 collections:
   - name: pages
-    label: Infos générales
+    label: Contenu du site
     files:
       - name: home
         label: Infos du tournoi
@@ -15,17 +15,20 @@ collections:
         fields:
           - { label: Année, name: year, widget: string }
           - { label: Date affichée, name: date, widget: string }
+          - { label: Date courte, name: dateShort, widget: string }
+          - { label: Date compte à rebours, name: targetDate, widget: string }
           - { label: Prix inscription, name: price, widget: string }
+          - { label: Capacité max, name: capacity, widget: string }
           - { label: Ville, name: city, widget: string }
           - { label: Nom du club, name: club, widget: string }
           - { label: IBAN, name: iban, widget: string }
+          - { label: Bénéficiaire IBAN, name: ibanBeneficiaire, widget: string }
+          - { label: Adresse IBAN, name: ibanAdresse, widget: string }
       - name: rewards
         label: Récompenses
         file: src/content/rewards.json
         fields:
-          - label: Prix participants
-            name: participantPrize
-            widget: text
+          - { label: Prix participants, name: participantPrize, widget: text }
           - label: Liste des prix
             name: prizes
             widget: list
@@ -37,3 +40,20 @@ collections:
                 name: specs
                 widget: list
                 field: { label: Spec, name: spec, widget: string }
+      - name: programme
+        label: Programme de la journée
+        file: src/content/programme.json
+        fields:
+          - { label: Cadence de jeu, name: cadence, widget: string }
+          - { label: Description cadence, name: cadenceDescription, widget: text }
+          - label: Étapes du programme
+            name: items
+            widget: list
+            fields:
+              - { label: Heure, name: time, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - label: Détails
+                name: details
+                widget: list
+                field: { label: Détail, name: detail, widget: string }

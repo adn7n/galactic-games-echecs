@@ -1,3 +1,4 @@
+import programmeData from "../content/programme.json";
 import React, { useState } from "react";
 import { Clock, Info, ShieldAlert, Award, Coffee } from "lucide-react";
 
@@ -9,7 +10,8 @@ interface TimelineItem {
   details: string[];
 }
 
-const PROGRAMME_ITEMS: TimelineItem[] = [
+const PROGRAMME_ITEMS: TimelineItem[] = programmeData.items;
+const UNUSED = [
   {
     id: "p1",
     time: "9h00",
@@ -137,12 +139,12 @@ export default function Programme() {
                 Cadence de jeu Homologuée FSE
               </h4>
               <p className="text-[11px] text-slate-500 font-medium font-sans mt-0.5">
-                Le tournoi respecte les directives d'arbitrage de la Fédération Suisse des Échecs. Arbitre principal présent sur place.
+                {programmeData.cadenceDescription}
               </p>
             </div>
           </div>
           <div className="text-[11px] font-mono py-1.5 px-3 rounded bg-slate-50 text-slate-600 border border-slate-200/80 self-stretch sm:self-auto flex items-center justify-center font-bold">
-            7 rondes · 10 min + 5s
+            {programmeData.cadence}
           </div>
         </div>
       </div>
