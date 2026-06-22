@@ -1,8 +1,8 @@
 {
-  "participantPrize": "Chez Galactic Games, aucun joueur ne part les mains vides. Chaque joueur repart avec un cadeau exclusif du tournoi (incluant l'insigne d'honneur, un carnet tactique, et d'autres goodies), quels que soient ses résultats physiques dans le classement.",
+  "participantPrize": "Aux Galactic Games, aucun joueur ne repart les mains vides. Chaque joueur reçoit un cadeau, quelque soient ses résultats.",
   "prizes": [
     {
-      "name": "PS5 Slim",
+      "name": "PS5",
       "availability": "x2 disponibles",
       "description": "Pour les grands gagnants",
       "specs": [
@@ -26,7 +26,7 @@
       "id": "switch2"
     },
     {
-      "name": "Drones GPS",
+      "name": "Drones",
       "availability": "x10 disponibles",
       "description": "Explorez les cieux",
       "specs": [
