@@ -29,7 +29,7 @@ export default function Ticker() {
             </span>
             <span className="text-indigo-200 font-serif text-2xl md:text-3xl">&bull;</span>
             <span className="font-serif italic text-2xl md:text-3xl text-slate-400/80 hover:text-slate-800 transition-colors duration-300 font-mono">
-              2026
+              {content.year}
             </span>
           </div>
         </div>
