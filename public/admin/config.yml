@@ -19,6 +19,8 @@ collections:
           - { label: Date compte à rebours, name: targetDate, widget: string }
           - { label: Prix inscription, name: price, widget: string }
           - { label: Capacité max, name: capacity, widget: string }
+          - { label: Nombre de prix, name: prizesCount, widget: string }
+          - { label: Heure de début, name: startTime, widget: string }
           - { label: Ville, name: city, widget: string }
           - { label: Nom du club, name: club, widget: string }
           - { label: IBAN, name: iban, widget: string }
