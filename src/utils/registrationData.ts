@@ -1,4 +1,5 @@
 import { Registration } from "../types";
+import content from "../content/home.json";
 
 export const AGE_CATEGORIES = [
   "U6",
@@ -11,7 +12,7 @@ export const AGE_CATEGORIES = [
 
 export const MOCK_PLAYERS: Registration[] = [];
 
-export const INITIAL_CAPACITY = 64;
+export const INITIAL_CAPACITY = parseInt(content.capacity);
 
 // Retrieve sheet script WebApp URL
 export const getGoogleSheetsUrl = (): string => {

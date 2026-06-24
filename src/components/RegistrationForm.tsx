@@ -29,7 +29,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
   };
 
   const handleCopyAllPayments = (ticketNum: string, playerFirstName: string, playerLastName: string) => {
-    const text = `Bénéficiaire : CCP Cercle d’Echecs de Nyon\nAdresse : ${content.ibanAdresse}\nIBAN : ${content.iban}\nMotif de versement : ${playerFirstName} ${playerLastName} - Numéro de joueur: ${ticketNum}\nMontant : CHF 30.00`;
+    const text = `Bénéficiaire : CCP Cercle d’Echecs de Nyon\nAdresse : ${content.ibanAdresse}\nIBAN : ${content.iban}\nMotif de versement : ${playerFirstName} ${playerLastName} - Numéro de joueur: ${ticketNum}\nMontant : ${content.priceNumber}`;
     navigator.clipboard.writeText(text);
     setCopiedAll(true);
     setTimeout(() => setCopiedAll(false), 2000);
@@ -175,7 +175,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
               <div>
                 <h5 className="text-[11px] font-bold uppercase tracking-wider">Facture envoyée</h5>
                 <p className="text-[11px] text-indigo-750 font-medium leading-relaxed mt-0.5">
-                  La facture d'un montant de <strong>CHF 30.-</strong> a été transmise à l'adresse <strong>{successTicket.email}</strong>.
+                  La facture d'un montant de <strong>{content.price}</strong> a été transmise à l'adresse <strong>{successTicket.email}</strong>.
                 </p>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
                   <div className="bg-slate-50 border border-slate-200/60 rounded-lg p-4 space-y-2 text-xs">
                     <div className="flex justify-between text-slate-600 font-medium">
                       <span>Inscription individuelle (Tournoi)</span>
-                      <span>CHF 30.00</span>
+                      <span>{ content.priceNumber}</span>
                     </div>
                     <div className="flex justify-between text-slate-600 font-medium">
                       <span>Cadeau participant & goodies</span>
@@ -238,7 +238,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
                     </div>
                     <div className="border-t border-slate-200 my-2 pt-2 flex justify-between font-bold text-slate-800 text-sm">
                       <span>Total à régler :</span>
-                      <span className="text-indigo-650">CHF 30.00</span>
+                      <span className="text-indigo-650">{ content.priceNumber}</span>
                     </div>
                   </div>
                 </div>
@@ -350,7 +350,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
 
               <div className="max-w-md mx-auto space-y-4">
                 <p className="text-slate-600 text-xs sm:text-sm font-sans leading-relaxed font-medium">
-                  🏆 Nos <strong>64 places</strong> d'échiquiers pour cette année sont désormais entièrement complètes. Le tournoi affiche sold-out !
+                  🏆 Nos <strong>{content.capacity} places</strong> d'échiquiers pour cette année sont désormais entièrement complètes. Le tournoi affiche sold-out !
                 </p>
                 <p className="text-slate-500 text-xs sm:text-xs leading-relaxed font-medium bg-slate-50 border border-slate-150 p-4 rounded-xl">
                   <strong>On se réjouit de vous retrouver l'année prochaine !</strong> Continuer de vous entraîner, préparez de superbes gambits intergalactiques et ne manquez pas le lancement des inscriptions pour la prochaine édition !
@@ -524,7 +524,7 @@ export default function RegistrationForm({ onNewRegistration }: { onNewRegistrat
                     Traitement en cours...
                   </>
                 ) : (
-                  `Confirmer mon inscription — CHF 30.-`
+                  `Confirmer mon inscription — ${content.price}`
                 )}
               </button>
             </div>
