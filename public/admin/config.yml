@@ -2,6 +2,8 @@ backend:
   name: github
   repo: adn7n/galactic-games-echecs
   branch: main
+  auth_type: implicit
+  app_id: VOTRE_TOKEN_ICI
 
 media_folder: public/images
 
