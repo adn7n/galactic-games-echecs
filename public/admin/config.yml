@@ -2,7 +2,7 @@ backend:
   name: github
   repo: adn7n/galactic-games-echecs
   branch: main
-  base_url: https://sveltia-cms-auth.sveltia.workers.dev
+  base_url: https://sveltia-cms-auth.adnilsonb834.workers.dev
 
 media_folder: public/images
 
