@@ -2,8 +2,6 @@ backend:
   name: github
   repo: adn7n/galactic-games-echecs
   branch: main
-  base_url: https://galactic-games-tournoi-d-echecs.vercel.app
-  auth_endpoint: api/auth
 
 media_folder: public/images
 
